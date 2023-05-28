@@ -35,11 +35,16 @@ to place an order.
 For simplicity the data will come from and will be recorded in text files.
 Source tree
 The main source tree will have the following infrastructure:
+
  `Main.go`
+ 
       `/controller/TeaController.go` Tea order (rest request to list all available Tea)  (Gin very nice)
+      
       `/application/TeaApp.go` (Java Bean/record, Structs in Go)
+      
       `/domain/` entities (Tea entity) and aggregating use of infrastructure layer
-      `/infrastructure/TeaService` call to get data from different data sources (database, file, external services) read from a file
+      
+      `/infrastructure/TeaDataAccess` call to get data from different data sources (database, file, external services) read from a file
       
 Files to generate
 We need to be able to write manually what we want to generate.
