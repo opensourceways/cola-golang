@@ -1,5 +1,9 @@
 # COLA 
 
+Layered architecture:
+
+<img width="655" alt="Screenshot 2023-05-28 at 12 00 20 pm" src="https://github.com/olamy/cola-golang/assets/19728/c724ab32-b64e-4880-b199-67a4eaa7d548">
+
 ## In Java
 
 The scope OF each layer are as follows:
