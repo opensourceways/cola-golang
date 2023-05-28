@@ -51,22 +51,22 @@ We need to be able to write manually what we want to generate.
 First step. Manually write the customer order in Go BUT respecting the COLA principle of layers. We will have all 4 layers as an example.
 Write the template generator, divided in 4 parts
 1. Generating the controller layer code (in controller directory)
-1.1. TeaInventoryController in Go (using Gin) (methods: list possible teas, detail of a Tea by id) using DefaultTeaService (I’m not sure how to do this in Go e.g dependency injection)
-1.2. TeaOrderController in Go (using Gin) (methods:  order a Tea and list orders from email) using DefaultTeaService (I’m not sure how to do this in Go e.g dependency injection)
-1.3. TeaService interface in Go (methods: list teas, order and list orders from email)
-1.4. Structs TeaDTO and TeaOrderDTO (same as Structs from the domain layer)
+ 1. TeaInventoryController in Go (using Gin) (methods: list possible teas, detail of a Tea by id) using DefaultTeaService (I’m not sure how to do this in Go e.g dependency injection)
+ 2. TeaOrderController in Go (using Gin) (methods:  order a Tea and list orders from email) using DefaultTeaService (I’m not sure how to do this in Go e.g dependency injection)
+ 3. TeaService interface in Go (methods: list teas, order and list orders from email)
+ 4. Structs TeaDTO and TeaOrderDTO (same as Structs from the domain layer)
 
 2. Generating the application layer code
-2.1 DefaultTeaService implementing TeaService (receiving OrderTeaCommand see Command Pattern in GO https://dev.to/tomassirio/command-design-pattern-in-go-3lpl )
-2.2.OrderTeaCommand struct to contain number of entities to buy
+ 1. DefaultTeaService implementing TeaService (receiving OrderTeaCommand see Command Pattern in GO https://dev.to/tomassirio/command-design-pattern-in-go-3lpl )
+ 2. OrderTeaCommand struct to contain number of entities to buy
 
 3.Generating the domain layer code
-3.1. Struct (bean) Tea.go (with field such id, name, price)
-3.2. Struct (bean) TeaOrder.go (with field such id, email, teaId)
+ 1. Struct (bean) Tea.go (with field such id, name, price)
+ 2. Struct (bean) TeaOrder.go (with field such id, email, teaId)
 
 4. Generating the infrastructure layer code
-4.1. TeaFileReader (read teas from a file, return collection of Tea struct)
-4.2. TeaOrderWriter (write order to a file, read orders)
+ 1. TeaFileReader (read teas from a file, return collection of Tea struct)
+ 2. TeaOrderWriter (write order to a file, read orders)
 
 
 
