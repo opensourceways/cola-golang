@@ -51,6 +51,7 @@ The main source tree will have the following infrastructure:
       `/infrastructure/TeaDataAccess` call to get data from different data sources (database, file, external services) read from a file
       
 #### Files to generate
+For simplicity the code will be generated using Maven Archetype (https://maven.apache.org/archetype/) similar to (https://github.com/raydac/mvn-golang)
 We need to be able to write manually what we want to generate.
 First step. Manually write the customer order in Go BUT respecting the COLA principle of layers. We will have all 4 layers as an example.
 Write the template generator, divided in 4 parts
@@ -73,6 +74,8 @@ Write the template generator, divided in 4 parts
  1. TeaFileReader (read teas from a file, return collection of Tea struct)
  2. TeaOrderWriter (write order to a file, read orders)
 
+#### Transforming the manually written project into a Maven Archetype
+Depending on the complexity of the manually written project, we will use automatic Maven archetype generation or manually write the archetypes.
 
 
 
