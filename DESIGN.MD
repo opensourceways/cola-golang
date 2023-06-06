@@ -34,8 +34,8 @@ COLA use Pattern command link between controller application (COLA has moved to 
 
 The project cola-gola will generate a template of code in Go with the layers and patterns similar to the COLA framework which is written in Java.
 The generated code will contain a TeaOrdering application which will expose 2 Rest Api methods:
-to list the different Teas 
-to place an order.
+- to list the different Teas 
+- to place an order.
 For simplicity the data will come from and will be recorded in text files.
 Source tree
 The main source tree will have the following infrastructure:
